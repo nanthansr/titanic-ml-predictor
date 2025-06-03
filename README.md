@@ -1,27 +1,37 @@
 # Titanic Survival Predictor 🚢
 
-A simple logistic regression model that predicts passenger survival using the Titanic dataset.
+A machine learning project that predicts passenger survival using the Titanic dataset.  
+This project includes multiple models with performance comparisons to explore model accuracy and feature influence.
 
-## Features Used
-- Pclass
-- Sex
-- Age
-- SibSp (number of siblings/spouses aboard)
-- Fare
+---
 
-## Accuracy
-Achieved ~75.5% accuracy using logistic regression.
+## 📊 Features Used
+- `Pclass`: Passenger class
+- `Sex`: Gender (encoded as 0 = male, 1 = female)
+- `Age`: Age of passenger
+- `SibSp`: Number of siblings/spouses aboard
+- `Fare`: Ticket fare
 
-## Tools & Libraries
-- Python
-- pandas
-- matplotlib & seaborn
+---
+
+## 🛠️ Tools & Libraries
+- Python (Jupyter Notebook)
+- pandas, numpy
+- seaborn, matplotlib
 - scikit-learn
 
-## Files
-- `Titanic_Model.ipynb` — main notebook
+---
 
-## 🔍 Model Comparison
+## 📂 Project Files
+
+| File                       | Description                            |
+|----------------------------|----------------------------------------|
+| `Titanic_Model.ipynb`      | Logistic Regression implementation     |
+| `Titanic_Model_Tree.ipynb` | Decision Tree & Random Forest models   |
+
+---
+
+## ✅ Model Performance Comparison
 
 | Model                | Accuracy | Precision (Survived) | Recall (Survived) | F1-Score (Survived) |
 |----------------------|----------|------------------------|--------------------|----------------------|
@@ -29,11 +39,19 @@ Achieved ~75.5% accuracy using logistic regression.
 | Decision Tree        | 74.1%    | 0.69                   | 0.61               | 0.65                 |
 | Random Forest        | **76.9%**| **0.70**               | **0.71**           | **0.71**             |
 
-### 🎯 Conclusion
-Random Forest outperformed the other models in both accuracy and survivor recall. This ensemble method improved the balance between correctly identifying both survivors and non-survivors.
+---
 
-### 📈 Next Steps
-- Tune hyperparameters (e.g., `max_depth`, `n_estimators`)
-- Explore more features (e.g., `Embarked`, `Cabin`, `Title`)
-- Try GridSearchCV for model optimization
+## 🎯 Conclusion
 
+- **Random Forest** performed the best across all key metrics.
+- It provided a better balance in predicting both survivors and non-survivors.
+- Logistic Regression remained competitive and interpretable.
+- Decision Tree offers simplicity but underperformed slightly.
+
+---
+
+## 🚀 Next Steps
+- 🔧 Tune hyperparameters using `GridSearchCV`
+- 📊 Add more features (e.g., `Embarked`, `Cabin`, `Title` from Name)
+- 🌐 Build a Streamlit app to deploy the model
+- 📦 Save models with `joblib` for reuse
