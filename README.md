@@ -38,7 +38,12 @@ This project includes multiple models with performance comparisons to explore mo
 | Logistic Regression  | 75.5%    | 0.70                   | 0.66               | 0.68                 |
 | Decision Tree        | 74.1%    | 0.69                   | 0.61               | 0.65                 |
 | Random Forest        | **76.9%**| **0.70**               | **0.71**           | **0.71**             |
+| **Random Forest (Tuned)** | **79.7%** | **0.75**           | **0.71**           | **0.73**             |
 
+### 🧪 Best Parameters from GridSearchCV
+```python
+{'max_depth': None, 'min_samples_split': 10, 'n_estimators': 50}
+```
 ---
 
 ## 🎯 Conclusion
